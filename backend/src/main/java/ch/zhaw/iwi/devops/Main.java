@@ -44,6 +44,7 @@ import ch.zhaw.iwi.devops.service.questionnaire.QuestionnaireRestService;
 import ch.zhaw.iwi.devops.service.questionnaireresponse.QuestionnaireResponseRestService;
 import ch.zhaw.iwi.devops.service.sport.SportRestService;
 import ch.zhaw.iwi.devops.service.studyprogram.StudyProgramRestService;
+import ch.zhaw.iwi.devops.service.module.ModuleRestService;
 import ch.zhaw.iwi.devops.service.user.UserRestService;
 import ch.zhaw.iwi.devops.service.user.permission.PermissionFunctionRestService;
 import ch.zhaw.iwi.devops.service.user.permission.PermissionRoleRestService;
@@ -95,7 +96,7 @@ public class Main {
 		});
 		
 		// Model Services
-		injector.getInstance(StudyProgramRestService.class).init();
+		injector.getInstance(ModuleRestService.class).init();
 		
 		injector.getInstance(MockupRestService.class).init();
 		injector.getInstance(FileRestService.class).init();

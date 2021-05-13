@@ -166,6 +166,51 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "NewModuleForm",
+                    "title": "Module",
+                    "url": "/module",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": "Name",
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "credits",
+                            "type": "number",
+                            "name": "Credits",
+                            "width": 2,
+                            "min": 3,
+                            "max": 12,
+                            "digits": 0,
+                            "required": true
+                        },
+                        {
+                            "id": "description",
+                            "type": "text",
+                            "name": "Description",
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                {
                     "id": "PatientForm",
                     "title": "Patient",
                     "url": "/patient",
@@ -1492,7 +1537,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>DevOps-Projekt - Hochschul-Verwaltung - Remo Steiner</h4>",
                             "newRow": true
                         },
                         {
@@ -1501,6 +1546,15 @@ export class GuiModel {
                             "icon": "fa-file-alt",
                             "color": "wet-asphalt",
                             "page": "studyProgramPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Module" },
+                            "icon": "fa-book",
+                            "color": "wet-asphalt",
+                            "page": "modulePage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -1531,6 +1585,35 @@ export class GuiModel {
                             "url": "/studyProgram",
                             "form": {
                                 "form": "StudyProgramForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "modulePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewModule",
+                            "icon": "fa-book",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "NewModuleForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "ModuleProgram",
+                            "icon": "fa-book",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/module",
+                            "form": {
+                                "form": "NewModuleForm"
                             }
                         }
                     ]

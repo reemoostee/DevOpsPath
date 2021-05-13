@@ -30,6 +30,7 @@
 		<class>ch.zhaw.iwi.devops.model.questionnaireresponse.value.InteractionElementFileValue</class>
 		<class>ch.zhaw.iwi.devops.model.sport.Sport</class>
 		<class>ch.zhaw.iwi.devops.model.studyprogram.StudyProgram</class>
+		<class>ch.zhaw.iwi.devops.model.module.Module</class>
 		<class>ch.zhaw.iwi.devops.model.user.permission.PermissionFunction</class>
 		<class>ch.zhaw.iwi.devops.model.user.permission.PermissionRole</class>
 		<properties>
