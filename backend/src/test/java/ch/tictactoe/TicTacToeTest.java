@@ -62,4 +62,17 @@ public class TicTacToeTest {
         ttt.play(3,ttt.getCurrentPlayer());
         Assert.assertEquals("x gewinnt",ttt.play(7,ttt.getCurrentPlayer()));
     }
+
+    @Test
+    public void testUnentschieden(){
+        ttt.play(0,ttt.getCurrentPlayer());
+        ttt.play(3,ttt.getCurrentPlayer());
+        ttt.play(1,ttt.getCurrentPlayer());
+        ttt.play(4,ttt.getCurrentPlayer());
+        ttt.play(5,ttt.getCurrentPlayer());
+        ttt.play(2,ttt.getCurrentPlayer());
+        ttt.play(6,ttt.getCurrentPlayer());
+        ttt.play(8,ttt.getCurrentPlayer());
+        Assert.assertEquals("unentschieden!",ttt.play(7,ttt.getCurrentPlayer()));
+    }
 }
