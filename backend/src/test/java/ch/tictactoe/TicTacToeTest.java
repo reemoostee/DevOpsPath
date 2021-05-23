@@ -95,8 +95,12 @@ public class TicTacToeTest {
         Boolean anotherBoolean = false;
         Assert.assertTrue(aBoolean);
         Assert.assertFalse(anotherBoolean);
-        
+
         Assert.assertNotNull(anObject);
+    }
+
+    @Test void ichSchlageFehl(){
+        Assert.assertFalse(true);
     }
 
     @AfterClass
