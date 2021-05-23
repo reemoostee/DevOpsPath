@@ -4,12 +4,19 @@ import ch.zhaw.iwi.devops.tictactoe.*;
 
 import static org.junit.Assert.assertNotEquals;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class TicTacToeTest {
     private TicTacToe ttt;
+    
+    @BeforeClass
+    public static void allesVorbereiten(){
+        //Bspw. Datenbank initialisieren
+    }
 
     @Before
     public void setUp() throws Exception {
@@ -74,5 +81,26 @@ public class TicTacToeTest {
         ttt.play(6,ttt.getCurrentPlayer());
         ttt.play(8,ttt.getCurrentPlayer());
         Assert.assertEquals("unentschieden!",ttt.play(7,ttt.getCurrentPlayer()));
+    }
+
+    @Test
+    public void demoAsserts(){
+        Assert.assertEquals(1, 1);
+        Assert.assertEquals("abc", "abc");
+
+        Object anObject = new Object();
+        Assert.assertEquals(anObject, anObject);
+
+        Boolean aBoolean = true;
+        Boolean anotherBoolean = false;
+        Assert.assertTrue(aBoolean);
+        Assert.assertFalse(anotherBoolean);
+        
+        Assert.assertNotNull(anObject);
+    }
+
+    @AfterClass
+    public static void allesAufräumen(){
+        //Bspw. Datenbank löschen/bereinigen
     }
 }
