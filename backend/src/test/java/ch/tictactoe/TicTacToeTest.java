@@ -99,7 +99,8 @@ public class TicTacToeTest {
         Assert.assertNotNull(anObject);
     }
 
-    @Test void ichSchlageFehl(){
+    @Test 
+    public void ichSchlageFehl(){
         Assert.assertFalse(true);
     }
 
